@@ -1,0 +1,119 @@
+<section class="palestine-hero">
+  <div class="overlay">
+    <h1>فلسطين الحرة</h1>
+    <p>
+      أرض التاريخ والحضارة والصمود 🇵🇸
+    </p>
+
+    <div class="stats">
+      <div class="box">
+        <h2>غزة</h2>
+        <span>مدينة الصمود</span>
+      </div>
+
+      <div class="box">
+        <h2>القدس</h2>
+        <span>عاصمة فلسطين</span>
+      </div>
+
+      <div class="box">
+        <h2>فلسطين</h2>
+        <span>تاريخ عريق وهوية خالدة</span>
+      </div>
+    </div>
+
+    <button onclick="playAnthem()">تشغيل النشيد الوطني</button>
+
+    <audio id="anthem" src="anthem.mp3"></audio>
+  </div>
+</section>
+
+<style>
+body{
+  margin:0;
+  font-family:Tahoma, sans-serif;
+  background:#000;
+}
+
+.palestine-hero{
+  height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1547981609-4b6bf67db7d1?q=80&w=1400&auto=format&fit=crop');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+}
+
+.overlay{
+  max-width:900px;
+  padding:20px;
+}
+
+.overlay h1{
+  font-size:70px;
+  margin-bottom:10px;
+  color:#ffffff;
+  text-shadow:0 0 20px red;
+}
+
+.overlay p{
+  font-size:24px;
+  margin-bottom:40px;
+  color:#ddd;
+}
+
+.stats{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.box{
+  background:rgba(255,255,255,0.1);
+  border:1px solid rgba(255,255,255,0.2);
+  padding:25px;
+  border-radius:20px;
+  width:220px;
+  backdrop-filter:blur(10px);
+  transition:0.3s;
+}
+
+.box:hover{
+  transform:translateY(-10px);
+  background:rgba(255,255,255,0.2);
+}
+
+.box h2{
+  color:#00ff88;
+  margin-bottom:10px;
+}
+
+button{
+  margin-top:40px;
+  padding:15px 35px;
+  border:none;
+  border-radius:50px;
+  background:#d60000;
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#ff0000;
+  transform:scale(1.05);
+}
+</style>
+
+<script>
+function playAnthem(){
+  document.getElementById("anthem").play();
+}
+</script>
